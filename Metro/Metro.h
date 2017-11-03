@@ -38,6 +38,7 @@ public:
   void interval(unsigned long interval_millis);
   uint8_t check();
   void reset();
+  unsigned long timeleft();
 	
 private:
   unsigned long  previous_millis, interval_millis;
