@@ -58,4 +58,12 @@ void Metro::reset()
 
 }
 
-
+unsigned long Metro::timeleft() {
+  if ( (millis() - previous_millis) >= interval_millis) {
+    return 0;
+  }
+  else {
+    unsigned long left = interval_millis - (millis() - previous_millis);
+    return left;
+  }
+}
